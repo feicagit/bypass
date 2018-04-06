@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{c3ed4805-b815-47a8-9513-dc627a7267ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="callback">
+      <UniqueIdentifier>{031791d0-81ba-4bfb-a323-959611622a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\about">
+      <UniqueIdentifier>{4a468f24-651b-4a22-8ebe-e570cc122439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\bypasslive">
+      <UniqueIdentifier>{8b958a31-7b06-4b34-83da-1e1885c60501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\bypasslive\hook">
+      <UniqueIdentifier>{d29ccf39-0604-497a-a83f-18fea20656f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\bypasslive\frontpage">
+      <UniqueIdentifier>{992cc5a5-579f-4548-97e5-12272686bb7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\bypasslive\chatroom_form">
+      <UniqueIdentifier>{4bd13230-cd9c-4315-9023-9343edc3ab27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{b8f3e705-7bcf-4660-8c33-9ca48186ad75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\bypasslive\main_picture_set">
+      <UniqueIdentifier>{e7835196-bd29-4ee0-bfd1-c848e6fa0df8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="callback\chatroom_callback.h">
+      <Filter>callback</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\about\about_form.h">
+      <Filter>gui\about</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\audio_hook_form.h">
+      <Filter>gui\bypasslive\hook</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\bypass_live_frontpage.h">
+      <Filter>gui\bypasslive\frontpage</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\chatroom_form.h">
+      <Filter>gui\bypasslive\chatroom_form</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player_manager.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\main_picture_set_form.h">
+      <Filter>gui\bypasslive\main_picture_set</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="callback\chatroom_callback.cpp">
+      <Filter>callback</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\about\about_form.cpp">
+      <Filter>gui\about</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\audio_hook_form.cpp">
+      <Filter>gui\bypasslive\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\bypass_live_frontpage.cpp">
+      <Filter>gui\bypasslive\frontpage</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\chatroom_form_beauty.cpp">
+      <Filter>gui\bypasslive\chatroom_form</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\chatroom_form_live.cpp">
+      <Filter>gui\bypasslive\chatroom_form</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\chatroom_form_msg.cpp">
+      <Filter>gui\bypasslive\chatroom_form</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\chatroom_form_ui.cpp">
+      <Filter>gui\bypasslive\chatroom_form</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_manager.cpp">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\main_picture_set_form.cpp">
+      <Filter>gui\bypasslive\main_picture_set</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

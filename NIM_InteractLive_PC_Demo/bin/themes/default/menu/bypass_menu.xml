@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="agree" width="170" height="24" tooltiptext="同意连麦">
+            <Label class="menu_text" text="同意" />
+        </MenuElement>
+        <MenuElement class="MenuElement" name="reject" width="170" height="24" tooltiptext="拒绝连麦" visible="false">
+            <Label class="menu_text" name="reject_info" text="拒绝" />
+        </MenuElement>
+    </VListBox>
+</Window>

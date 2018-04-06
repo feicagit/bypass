@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="130,130"  shadowattached="fasle" bkcolor="main_window_background">
+  <VListBox class="menu" bkcolor="main_window_background">
+    <MenuElement class="MenuElement_Capture_Choice" name="menu_videointeract" width="130">
+      <Button class="menu_text"  name="videointeract" visible="true" text="视频连线" normaltextcolor="white"   width="130" height="40"/>
+    </MenuElement>
+    <MenuElement class="MenuElement_Capture_Choice" name="menu_audiointeract" width="130">
+      <Button class="menu_text" name="audiointeract" visible="true" text="语音连线" normaltextcolor="white"   width="130" height="40"/>
+    </MenuElement>
+    
+  </VListBox>
+</Window>

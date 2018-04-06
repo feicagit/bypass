@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="550,200" caption="0,0,0,34" textid="STRID_CHATROOM_TIP_AUDIO_HOOK" >
+	<Class name="switch" value="normalimage=&quot;off_normal.png&quot; pushedimage=&quot;off_pushed.png&quot; disabledimage=&quot;off_pushed.png&quot; selectednormalimage=&quot;on_normal.png&quot; selectedpushedimage=&quot;on_pushed.png&quot; selecteddisabledimage=&quot;on_pushed.png&quot; cursortype=&quot;hand&quot;"/>
+    <VBox name="edit_box" bkcolor="bk_wnd_lightcolor" width="550" height="auto" padding="0,0,0,20">
+        <HBox class="caption">
+            <Label class="font_title" name="title" textid="STRID_CHATROOM_TIP_AUDIO_HOOK" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+		<HBox margin="20,20,20,10" height="auto" >
+			<Label font="2" text="背景乐开关" normaltextcolor="darkcolor"/>
+			<Control />
+			<CheckBox class="switch" name="open" selected="false"/>
+		</HBox>
+        <Control normalcolor="splitline_level1" width="stretch" height="1" margin="20,0,20,0"/>
+		<HBox margin="20,20,20,0" height="30" >
+		
+			<Box height="auto" bkimage="file='../public/edit/edit0.png' corner='10,10,10,10'" padding="2,4,2,4">
+				<RichEdit class="simple prompt" name="edit" height="20" font="2" vscrollbar="false" autovscroll="false" rich="true" prompttext="输入音乐播放器exe文件的路径" />
+			</Box>
+			<Button  class="btn_global_green_80x30" name="button_ok" text="确定" margin="10,0,0,0" />
+		</HBox>
+		<Label font="2" margin="20,5,20,0" text="比如网易云音乐、QQ音乐、虾米音乐、百度音乐等" normaltextcolor="lightcolor"/>
+		<Label name="tip_err" font="2" margin="20,10,20,0" text="音乐播放器exe文件路径错误！" normaltextcolor="link_red" visible="false"/>
+    </VBox>
+</Window>

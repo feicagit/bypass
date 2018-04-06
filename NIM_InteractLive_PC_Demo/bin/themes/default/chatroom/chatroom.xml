@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="1020,624" mininfo="1020,624" caption="0,0,0,42" sizebox="4,4,4,4" textid="STRID_CHATROOM_TITLE" shadowattached="false">
+    <VBox bkcolor="bk_listitem_selected" bordersize="1,1,1,1" bordercolor="splitline_level1" padding="1,1,1,1" >
+        <HBox class="caption" height="42">
+            <!--Box width="29" height="29" mouse="false" valign="center" >
+                <Control name="header_icon" width="27" height="27" borderround="27,27" margin="1,1,1,1" mouse="false" />
+                <Control width="29" height="29" bkimage="mask_25x25.png" mouse="false"/>
+            </Box-->
+            <Label name="name" font="1" normaltextcolor="dark2color" valign="center" margin="6"/>
+            
+            <Control width="stretch"/>
+            
+            <HBox width="auto" height="auto" valign="top" margin="0,6">
+                <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+                <Box width="21" margin="4,6,0,0">
+                    <Button class="btn_wnd_max" name="maxbtn"/>
+                    <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+                </Box>
+                <Button class="btn_wnd_close" name="closebtn_ex" margin="4,6,0,0"/>
+            </HBox>
+        </HBox>
+        
+        <HBox width="stretch" height="stretch" margin="12,12,12,12">
+          <VBox width="stretch" height="stretch" >
+            <TabBox name="ls_tab" width="stretch" height="stretch" margin="0,0,0,0">
+              <VBox bkcolor="white" bordersize="1,0,1,0" bordercolor="splitline_level1" >
+                <Control normalcolor="splitline_level1" width="stretch" height="1"/>
+                <Box name="box">
+                  <BitmapControl name="video_screen" bkcolor="bk_video_content" visible="true">
+                    <BitmapControl name="bypass_screen" margin="0,0,50,50" bkcolor="bk_video_content" visible="false" maxwidth="120" maxheight="120" minwidth="90" minheight="90" valign="bottom"  halign="right" > </BitmapControl>
+                  </BitmapControl>
+                  <Label name="live_prompt"  font="18" normaltextcolor="white" halign="center" valign="center" text="直播尚未开启..." visible="false" />
+                  <Control name="loading_prompt" width="128" bkimage="loading.gif" height="15" halign="center" valign="center" visible="false"/>
+               
+                  <!--拉流处理 先注释掉-->
+                  <!--<Player name="player"/>-->
+                </Box>
+
+
+                <Box height="45">
+                  <HBox width="stretch" height="45" bkcolor="white">
+                    <Button name="start_ls" bkcolor="link_blue" font="1" normaltextcolor="white" width="90" height="stretch" text="开始直播" />
+                    <Button name="stop_ls" bkcolor="btn_red" font="1" normaltextcolor="white" width="90" height="stretch" text="结束直播" visible="false" />
+                    <Control normalcolor="splitline_level1" height="stretch" width="1"/>
+                    <Label name="ls_time" font="1" normaltextcolor="message_tip" valign="center" margin="18,0,0,0" text="00:00:00" />
+                    <Control width="stretch"/>
+
+                    <Button class="btn_global_white_80x30" name="main_picture_set" visible="false" text="设置主画面" valign="center" margin="10,0,0,0" />
+                    <Button class="btn_global_white_80x30" name="audio_hook" visible="true" text="背景乐" valign="center" margin="10,0,0,0"/>
+                    <Button class="btn_global_white_80x30" name="camera_set" visible="true" text="摄像头设置" valign="center" margin="10,0,0,0"/>
+                    <Button class="btn_global_white_80x30" name="mic_set" text="麦克风设置" valign="center" margin="10,0,10,0"/>
+                    <Button class="btn_global_white_80x30" name="model_set" text="摄像头直播" valign="center" margin="10,0,10,0"/>
+                    <Button class="btn_global_white_80x30" name="interact_set" text="互动" valign="center" margin="10,0,10,0"/>
+                    <!--<Button class="btn_main" name="model_set" text="摄像头直播" valign="center" margin="0,0,0,0" width="92" height="32" textpadding="0,-1,0,0"/>-->
+
+                    <Control normalcolor="splitline_level1" height="stretch" width="1"/>
+                  </HBox>
+                </Box>
+              </VBox>
+            </TabBox>
+            <Control normalcolor="splitline_level1" width="stretch" height="1"/>
+          </VBox>
+
+            <!--<VBox width="stretch" height="stretch" >
+            <TabBox name="ls_tab" width="stretch" height="stretch" margin="0,0,0,0" visible="true">
+              <VBox>
+                <Box name="box">
+                  <BitmapControl name="video_screen" bkcolor="bk_video_content" visible="true"> </BitmapControl>
+                  <Label name="live_prompt"  font="18" normaltextcolor="white" halign="center" valign="center" text="直播尚未开启..." />
+                  <Control name="loading_prompt" width="128" bkimage="loading.gif" height="15" halign="center" valign="center" visible="false"/>
+
+                </Box>
+
+
+                <Box height="80">
+                  <HBox  height="80" bkcolor="main_window_background" valign="bottom" padding="0,0,0,0">
+                    <Button name="start_ls" bkimage="file='start_ls.png'"  width="52" height="52" valign="center" margin="20,0,14,0"/>
+                    <Button name="stop_ls" bkimage="file='stop_ls.png'" width="52" height="52" visible="false" valign="center" margin="20,0,14,0"/>
+                    <Label name="ls_time" font="1" normaltextcolor="message_tip" valign="center"  text="00:00:00" />
+
+                    <Control width="stretch"/>
+
+
+                    <RichEdit  class="edit prompt input" name="rmpt_url"  width="440"  height="30" margin="10,0,0,0"
+                               valign="center" font="2"  prompttext="请输入直播流地址" padding="10,4,6,4" bordersize="0"
+                               normaltextcolor="btn_global_white"/>
+                    <Button class="btn_main" name="camera_set" visible="true" text="摄像头设置" valign="center" margin="10,0,0,0" width="92" height="32"
+                            textpadding="0,-1,0,0"/>
+                    <Button class="btn_main" name="mic_set" text="麦克风设置" valign="center" margin="10,0,10,0" width="92" height="32" textpadding="0,-1,0,0"/>
+                    <Button class="btn_main" name="model_set" text="摄像头直播" valign="center" margin="0,0,0,0" width="92" height="32" textpadding="0,-1,0,0"/>
+
+                    <Control width="20" margin="0,0,0,0" halign="right"/>
+                  </HBox>
+
+                </Box>
+              </VBox>
+            </TabBox>
+          </VBox>-->
+
+          <VBox width="246" height="stretch" margin="4,0,0,0" >
+            <VBox width="stretch" height="auto" bkcolor="white" bordersize="1,1,1,1" bordercolor="splitline_level1" padding="1,1,1,1">
+              <Label width="stretch" height="26" text="直播公告" align="vcenter" font="2" normaltextcolor="darkcolor"/>
+              <Control normalcolor="bk_listitem_selected" width="stretch" height="1"/>
+              <RichEdit name="bulletin" width="246" height="60" font="1" padding="6,2,6,2" rich="false" vscrollbar="true" autovscroll="true" normaltextcolor="dark2color" bkimage="file='icon_nobulletin.png' dest='99,8,148,52'" readonly="true" />
+            </VBox>
+
+            <VBox width="stretch" height="stretch" bkcolor="white" margin="0,4,0,0" bordersize="1,1,1,1" bordercolor="splitline_level1" padding="1,1,1,1">
+              <HBox width="stretch" height="37">
+                <Option name="option_intercommunicate" width="stretch" height="stretch" cursortype="hand" group="option_list_group" selected="true"
+                       text="讨论" font="2" align="vcenter" textpadding="0,0,0,2" normaltextcolor="darkcolor" selectedtextcolor="tab_text_selected"
+                       normalimage="bk_tab_unselected.png" selectednormalimage="file='bk_tab_selected.png' corner='0,0,0,2'"/>
+                <Control normalcolor="splitline_level1" height="stretch" width="1"/>
+                <Option name="option_online_members" width="stretch" height="stretch" cursortype="hand" group="option_list_group"
+                       text="成员" font="2" align="vcenter" textpadding="0,0,0,2" normaltextcolor="darkcolor" selectedtextcolor="tab_text_selected" normalimage="bk_tab_unselected.png" selectednormalimage="file='bk_tab_selected.png' corner='0,0,0,2'"/>
+                <Control normalcolor="splitline_level1" height="stretch" width="1"/>
+                <Box>
+                  <Option name="option_bypass_comunicate" width="stretch" height="stretch" cursortype="hand" group="option_list_group"
+                        text="互动" font="2" align="vcenter" textpadding="0,0,0,2" normaltextcolor="darkcolor" selectedtextcolor="tab_text_selected" normalimage="bk_tab_unselected.png" selectednormalimage="file='bk_tab_selected.png' corner='0,0,0,2'"/>
+                  <Control name="bypass_prompt" halign="center" valign="bottom" width="10" height="10" bkimage="icon_prompt.png" visible="false" />
+                </Box>
+                <Control normalcolor="splitline_level1" height="stretch" width="1"/>
+                <Option name="option_bypass_gift" width="stretch" height="stretch" cursortype="hand" group="option_list_group"
+                  text="礼物" font="2" align="vcenter" textpadding="0,0,0,2" normaltextcolor="darkcolor"
+                    selectedtextcolor="tab_text_selected" normalimage="bk_tab_unselected.png"/>
+                
+              </HBox>
+
+              <!--Control normalcolor="bk_listitem_selected" width="stretch" height="1"/-->
+
+              <TabBox name="list_tab" width="stretch" height="stretch" margin="1,0,1,0">
+                <RichEdit name="intercommunicate_list" width="stretch" rich="true" multiline="true" readonly="true" vscrollbar="true" autovscroll="true" font="1" />
+                <Box>
+                  <VListBox class="list" name="online_members_list" vscrollunit="80"/>
+                  <Box name="empty_members_list">
+                    <Control halign="center" valign="center" width="auto" height="auto" bkimage="icon_nodata.png" />
+                  </Box>
+                </Box>
+                <Box>
+                  <VListBox class="list" name="bypass_members_list" vscrollunit="80"/>
+                </Box>
+                <!--礼物-->
+                <Box>
+                  <!--<VListBox class="list" name="bypass_members_list" vscrollunit="80"/>-->
+                  <VBox name="giftinfo" height="220">
+                    <HBox margin="10,10,0,0">
+                      <VBox width="100" height="100" bordersize="1" bordercolor="gift_color_border" name="gift_box_1" visible="false">
+                        <Control name="gift_png_1" margin="0,12,0,0" width="60" height="60"  visible="false" halign="center"/>
+                        <HBox margin="0,4,0,10">
+                          <Control />
+                          <Label name="gift_1" text="玫瑰x" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_name" textpadding="7,0,0,0" visible="false"/>
+                          <Label name="gift_1_count" text="5" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_number" textpadding="5,0,0,3" visible="false"/>
+                          <Control />
+                        </HBox>
+                      </VBox>
+                      <VBox width="100" height="100" margin="10,0,0,0" bordersize="1" bordercolor="gift_color_border" name="gift_box_2" visible="false">
+                        <Control name="gift_png_2" margin="0,12,0,0" width="60" height="60"  visible="false" halign="center"/>
+                        <HBox margin="0,4,0,10">
+                          <Control />
+                          <Label name="gift_2" text="玫瑰x" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_name" textpadding="7,0,0,0" visible="false"/>
+                          <Label name="gift_2_count" text="5" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_number" textpadding="5,0,0,3" visible="false"/>
+                          <Control />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+
+                    <HBox margin="10,10,0,0">
+                      <VBox width="100" height="100" bordersize="1" bordercolor="gift_color_border" name="gift_box_3" visible="false">
+                        <Control name="gift_png_3" margin="0,12,0,0" width="60" height="60"  visible="false" halign="center"/>
+                        <HBox margin="0,4,0,10">
+                          <Control />
+                          <Label name="gift_3" text="玫瑰x" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_name" textpadding="7,0,0,0" visible="false"/>
+                          <Label name="gift_3_count" text="5" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_number" textpadding="5,0,0,3" visible="false"/>
+                          <Control />
+                        </HBox>
+                      </VBox>
+                      <VBox width="100" height="100" margin="10,0,0,0" bordersize="1" bordercolor="gift_color_border" name="gift_box_4" visible="false">
+                        <Control name="gift_png_4" margin="0,12,0,0" width="60" height="60"   visible="false" halign="center"/>
+                        <HBox margin="0,4,0,10">
+                          <Control />
+                          <Label name="gift_4" text="玫瑰x" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_name" textpadding="7,0,0,0" visible="false"/>
+                          <Label name="gift_4_count" text="5" font="11" height="stretch" halign="center" align="vcenter" normaltextcolor="gift_color_number" textpadding="5,0,0,3" visible="false"/>
+                          <Control />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+
+                  <VBox name="gift_prompt" halign="center" margin="0,40,0,0" height="100" visible="true">
+                    <Control halign="center"  width="80" height="68" bkimage="no_gift.png"/>
+                    <Label text="当前还没收到礼物" margin="0,16,0,0" font="12" normaltextcolor="gift_color_prompt" halign="center"/>
+                  </VBox>
+
+                </Box>
+              </TabBox>
+
+              <Control normalcolor="bk_listitem_selected" width="stretch" height="1"/>
+
+              <RichEdit name="input_edit" width="stretch" height="54" prompttext="和大家一起愉快聊天" font="1" padding="6,2,6,2" rich="true" multiline="true" wantreturnmsg="true" vscrollbar="true" autovscroll="true"/>
+
+              <HBox width="stretch" height="auto" margin="10,0,10,10">
+                <Control width="stretch"/>
+
+                <CheckBox name="btn_face" width="30" height="30" valign="center" margin="0" tooltiptext="表情"
+                        forenormalimage="file='btn_face.png' dest='5,5,25,25'" foredisabledimage="file='btn_face.png' dest='5,5,25,25' fade='80'"
+                        hotimage="icon_hover.png" pushedimage="icon_pushed.png" selectednormalimage="icon_pushed.png"
+                        selectedforenormalimage="file='btn_face.png' dest='5,5,25,25'" selectedforedisabledimage="file='btn_face.png' dest='5,5,25,25' fade='80'"/>
+
+                <Button name="btn_jsb" width="30" height="30" valign="center" margin="7,0,12,0" tooltiptext="石头剪刀布"
+                      forenormalimage="btn_jsb.png" foredisabledimage="file='btn_jsb.png' fade='80'"
+                      hotimage="icon_hover.png" pushedimage="icon_pushed.png"/>
+
+                <Button class="btn_global_green_80x30" name="send" text="发送" textpadding="4,0,4,0"/>
+              </HBox>
+            </VBox>
+          </VBox>
+        </HBox>
+    </VBox>
+</Window>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="410,250" mininfo="410,250" caption="0,0,0,60" textid="STRID_MEETING_FRONTPAGE_TITLE">
+	<VBox bkcolor="bk_wnd_lightcolor" height="auto" >
+		<HBox class="caption" height="60" >
+			<Box width="48" height="48" mouse="false" valign="center">
+				<Control name="header_image" width="46" height="46" borderround="46,46,46,46" margin="1,1,1,1" mouse="false"/>
+				<Control name="head_image_mask" bkimage="../public/headmask/icon_headimage_mask_48x48_selected.png" mouse="false"/>
+			</Box>
+			<Label name="name" font="18" normaltextcolor="dark2color" valign="center" margin="10"/>
+		
+			<Control width="stretch"/>
+			<HBox width="auto" height="auto" valign="top">
+                <Button class="btn_wnd_white_menu" name="menu_button" margin="10,6,0,0"/>
+				<Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+				<Button class="btn_wnd_close" name="close_btn" margin="4,6,0,0"/>
+			</HBox>
+		</HBox>
+		<Box height="auto" >
+			<VBox height="auto" >
+				<HBox margin="10,10,10,10" height="40" bkcolor="splitline_level2">
+					<Box name="net_detect_type" bkimage="WiFi-0.png" width="30" height="30" margin="5,0,10,0" valign="center" >
+						<Control name="net_detect_loading" bkimage="loading.gif" width="10" height="10" valign="bottom" halign="right" mouse="false"/>
+					</Box>
+					<TabBox name="net_detect_step" >
+						<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：检测中..." />
+						<HBox>
+							<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：通畅" />
+							<Label font="2" normaltextcolor="lightcolor" valign="center" text="（音视频均流畅）" />
+						</HBox>
+						<HBox>
+							<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：一般" />
+							<Label font="2" normaltextcolor="lightcolor" valign="center" text="（视频偶尔卡顿，音频流畅）" />
+						</HBox>
+						<HBox>
+							<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：较差" />
+							<Label font="2" normaltextcolor="lightcolor" valign="center" text="（视频卡顿，音频流畅）" />
+						</HBox>
+						<HBox>
+							<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：极差" />
+							<Label font="2" normaltextcolor="lightcolor" valign="center" text="（音视频均卡顿）" />
+						</HBox>
+						<HBox>
+							<Label font="2" normaltextcolor="darkcolor" valign="center" text="网络状况：" />
+							<Label font="2" normaltextcolor="btn_red" valign="center" text="检测失败！" />
+						</HBox>
+					</TabBox>
+					<ButtonBox name="net_detect" height="stretch" width="30" normalimage="file='refresh0.png' dest='8,13,23,28'" hotimage="file='refresh1.png' dest='8,13,23,28'" >
+					</ButtonBox>
+					<ButtonBox name="net_detect_info" height="stretch" width="30" normalimage="file='info0.png' dest='8,13,23,28'" hotimage="file='info1.png' dest='8,13,23,28'" >
+					</ButtonBox>
+				</HBox>
+				<HBox margin="10,10,0,0" height="auto" >
+					<Control valign="center" width="auto" height="auto" bkimage="join_pic.png" />
+					<Label margin="8,0,0,0" font="18" normaltextcolor="darkcolor" text="观众模式" />
+				</HBox>
+				<HBox height="auto" margin="31,20,0,0" >
+					<Label font="1" normaltextcolor="lightcolor" valign="center" text="直播房间ID号：" />
+					<RichEdit class="simple input prompt" name="edit_room_id" prompttext="输入直播房间ID" number="true" width="190" height="30" margin="0,0,0,0" padding="2,4,2,4" valign="center" font="2" />
+					<Button class="btn_global_green_80x30" name="join_room" text="进入直播间" margin="10,0,0,0" />
+				</HBox>
+				<HBox margin="10,30,0,0" height="auto" >
+					<Control valign="center" width="auto" height="auto" bkimage="create_pic.png" />
+					<Label margin="8,0,0,0" font="18" normaltextcolor="darkcolor" text="主播模式" />
+				</HBox>
+				<HBox height="auto" margin="31,20,0,30" >
+					<HBox width="200">
+					  <Option name="video_model" group="send_msg_setting" halign="right" valign="center" height="18"
+						normalimage="file='../public/option/option1_unselected.png' dest='0,2,14,16'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,2,14,16'"
+						textpadding="20,0,0,0" normaltextcolor="darkcolor" font="1" text="视频直播" selected="true"/>
+					  <Control />
+					  <Option name="audio_model" group="send_msg_setting" halign="right" valign="center"
+						normalimage="file='../public/option/option1_unselected.png' dest='0,2,14,16'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,2,14,16'"
+						textpadding="20,0,0,0" normaltextcolor="darkcolor" font="1" text="音频直播"/>
+					</HBox>
+					<Control />
+					<Button class="btn_global_green_80x30" name="create_room" text="开始直播" margin="0,0,14,0" />
+				</HBox>
+			</VBox>
+			<VBox name="net_detect_tip" halign="right" margin="0,50,10,0" padding="15,15,15,15" bkcolor="white" width="136" height="auto" visible="false" bkimage="file='bk.png' corner='10,10,10,10'" >
+				<Label name="tip_t_0" font="1" normaltextcolor="dark2color" valign="center" text="" />
+				<Label name="tip_t_1" font="1" normaltextcolor="dark2color" valign="center" text="" />
+				<Label name="tip_t_2" font="1" normaltextcolor="dark2color" valign="center" text="" />
+				<Label name="tip_t_3" font="1" normaltextcolor="dark2color" valign="center" text="" />
+				<Label name="tip_t_4" font="1" normaltextcolor="dark2color" valign="center" text="" />
+			</VBox>
+		</Box>
+	</VBox>
+</Window>

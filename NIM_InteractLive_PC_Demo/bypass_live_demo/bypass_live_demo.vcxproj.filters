@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="gui\login\login_form.cpp" />
+    <ClCompile Include="gui\login\login_form_ui.cpp" />
+    <ClCompile Include="gui\proxy\proxy_form.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="module\thread\db_thread.cpp" />
+    <ClCompile Include="module\thread\misc_thread.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\libs\nim_sdk_desktop\nim_tools_cpp_sdk\nim_audio_cpp\nim_audio_cpp.cpp">
+      <Filter>tools_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\nim_sdk_desktop\nim_tools_cpp_sdk\nim_http_cpp\nim_tools_http_cpp.cpp">
+      <Filter>tools_sdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app_dump.h" />
+    <ClInclude Include="gui\login\login_form.h" />
+    <ClInclude Include="gui\proxy\proxy_form.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="module\thread\db_thread.h" />
+    <ClInclude Include="module\thread\misc_thread.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\libs\nim_sdk_desktop\nim_tools_cpp_sdk\nim_audio_cpp\nim_audio_cpp.h">
+      <Filter>tools_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\nim_sdk_desktop\nim_tools_cpp_sdk\nim_http_cpp\nim_tools_http_cpp.h">
+      <Filter>tools_sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nim.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nim.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tools_sdk">
+      <UniqueIdentifier>{3546f16d-a012-44da-baf8-2bbe59078267}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
